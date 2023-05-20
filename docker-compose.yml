@@ -2,19 +2,21 @@ version: '3'
 services:
   train:
     image: rudrapalakiran55/paytmstrain:latest
-    port:
+    ports:
       - "80:80"
-    replicas: 3
+    deploy:
+      replicas: 3
 
   dth:
     image: rudrapalakiran55/paytmsdth:latest
-    port:
+    ports:
       - "81:80"
-    replicas: 3
+    deploy:
+      replicas: 3
 
   movies:
     image: rudrapalakiran55/paytmsmovies:latest
-    port:
+    ports:
       - "82:80"
-    replicas: 3
-
+    deploy:
+      replicas: 3
